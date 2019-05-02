@@ -352,7 +352,8 @@ class BasicBot {
                     await context.sendActivity(messages[locale].greeting);
                     // console.log(messages[locale].greeting);
                 } else if ((context.activity.text).toLowerCase() === 'lock them' ||
-                    (context.activity.text).toLowerCase() === 'sperre diese!') {
+                    (context.activity.text).toLowerCase() === 'sperre diese!' || 
+                    (context.activity.text).toLowerCase() === 'sperre diese') {
                     await dc.beginDialog(SHOW_FILTER);
                     await this.conversationState.saveChanges(context, false);
                 }
